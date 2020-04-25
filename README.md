@@ -7,8 +7,6 @@ This shorcut works with Espanso, a free text expander that is installed with Hom
 
 This shortcut uses Python to find and replace spaces in the string in the clipboard, as Bear's URL scheme requires spaces to be replaced with "%20"
 
-By typing the trigger text `:blink` in Bear it will auto-generate a footer with a soft reference link and date.
-
-Currently, the script returns an extra newline in the outputted text — you must manually delete that new line, I haven't found a workaroud.  Here's a [gif](https://gfycat.com/freeskinnyfairybluebird) of what this looks like.
+By typing the trigger text `:bfoot` in Bear it will auto-generate a footer with a soft reference link and date.
 
 Message me if you have any questions!

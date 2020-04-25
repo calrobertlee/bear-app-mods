@@ -1,4 +1,4 @@
-# espanso configuration file 
+# espanso configuration file
 
 # This is the default configuration file, change it as you like it
 # You can refer to the official documentation:
@@ -16,9 +16,10 @@ matches:
         params:
           cmd: "echo Hello from your shell"
 
-  # Bear Bi-directional link
-  - trigger: ":blink"
-    replace: "---\n\n## Other References\nReferences to [{{clipboard}}](bear://x-callback-url/search?term=%22{{output}}%22)\n\n[{{mydate}}]" 
+
+# Bear Bi-directional link v.2
+  - trigger: ":bfoot"
+    replace: "\n---\n\n{{output}}[{{mydate}}]" 
     vars:
       - name: clipboard
         type: clipboard
@@ -31,10 +32,28 @@ matches:
         params:
           args:
             - python
-            - /Users/YOUR_USER_NAME_HERE/Library/Preferences/espanso/script_replace-spaces.py
+            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py
+
+
+  # Bear Bi-directional link without date
+  - trigger: ":blink"
+    replace: "References to [{{clipboard}}](bear://x-callback-url/search?term=%22{{output}}%22)" 
+    vars:
+      - name: clipboard
+        type: clipboard
+      - name: mydate
+        type: date
+        params:
+          format: "%b %d, %Y at %I:%M %p"
+      - name: output
+        type: script
+        params:
+          args:
+            - python
+            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py
 
   # Bear Bi-directional date
-  - trigger: ":bidate"
+  - trigger: ":bdate"
     replace: "---\n\n## Other References\nReferences to [{{mydate}}](bear://x-callback-url/search?term=%22{{bb}}%20{{dd}}%2C%20{{yy}}%22)\n\n#.daily"
     vars:
       - name: mydate

@@ -7,7 +7,9 @@ def read_from_clipboard():
 
 # Creates variable
 clipContent = read_from_clipboard()
+preContent = read_from_clipboard()
 
 replacedContent = clipContent.replace(" ", "%20")
 
-print(replacedContent)
+print("## Other References\nReferences to ["+(preContent)+"](bear://x-callback-url/search?term=%22"+(replacedContent)+"%22)\n")
+

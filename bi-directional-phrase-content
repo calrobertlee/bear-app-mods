@@ -1,6 +1,0 @@
----
-
-## Other References
-References to [{#insertclipboard}](bear://x-callback-url/search?term=%22{#insertclipboard}%22)
-
-[{#datetime -f mmm dd, yyyy -s 0D0H} at {#datetime -f hh:nn am/pm -s 0D0H}]

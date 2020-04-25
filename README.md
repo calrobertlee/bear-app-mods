@@ -5,7 +5,7 @@ I was inspired by this [Reddit post](https://www.reddit.com/r/bearapp/comments/f
 
 This shorcut works with Espanso, a free text expander that is installed with Homebrew in the terminal.
 
-This shortcut uses Python to find and replace spaces in string in the clipboard, as Bear's URL scheme requires spaces to be replaced with "%20"
+This shortcut uses Python to find and replace spaces in the string in the clipboard, as Bear's URL scheme requires spaces to be replaced with "%20"
 
 By typing the trigger text `:blink` in Bear it will auto-generate a footer with a soft reference link and date.
 

@@ -17,8 +17,8 @@ matches:
           cmd: "echo Hello from your shell"
 
   # Bear Bi-directional link
-  - trigger: ":bilink"
-    replace: "---\n\n## Other References\nReferences to [{{clipboard}}](bear://x-callback-url/search?term=%22{{clipboard}}%22)\n\n[{{mydate}}]" 
+  - trigger: ":blink"
+    replace: "---\n\n## Other References\nReferences to [{{clipboard}}](bear://x-callback-url/search?term=%22{{output}}%22)\n\n[{{mydate}}]" 
     vars:
       - name: clipboard
         type: clipboard
@@ -26,6 +26,12 @@ matches:
         type: date
         params:
           format: "%b %d, %Y at %I:%M %p"
+      - name: output
+        type: script
+        params:
+          args:
+            - python
+            - /Users/YOUR_USER_NAME_HERE/Library/Preferences/espanso/script_replace-spaces.py
 
   # Bear Bi-directional date
   - trigger: ":bidate"

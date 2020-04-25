@@ -9,6 +9,6 @@ This shortcut uses Python to find and replace spaces in the string in the clipbo
 
 By typing the trigger text `:blink` in Bear it will auto-generate a footer with a soft reference link and date.
 
-Currently, there the script returns an extra newline in the outputted text — you must manually delete that new line.  Here's a [gif](https://gfycat.com/freeskinnyfairybluebird) of what this looks like.
+Currently, the script returns an extra newline in the outputted text — you must manually delete that new line, I haven't found a workaroud.  Here's a [gif](https://gfycat.com/freeskinnyfairybluebird) of what this looks like.
 
 Message me if you have any questions!

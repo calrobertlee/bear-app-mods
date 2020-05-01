@@ -1,4 +1,5 @@
 # espanso configuration file
+# MAKE SURE TO HAVE THE PROPER PATH TO THE PYTHON SCRIPT.  Right click the python script and hold alt, you should see an option to copy the path
 
 # This is the default configuration file, change it as you like it
 # You can refer to the official documentation:
@@ -6,15 +7,6 @@
 
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
-matches:
-  # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
 
 
 # Bear Bi-directional link v.2
@@ -32,7 +24,7 @@ matches:
         params:
           args:
             - python
-            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py
+            - /Users/YOURUSERNAME/Library/Preferences/espanso/script_replace-spaces.py
 
 
   # Bear Bi-directional link without date
@@ -50,7 +42,7 @@ matches:
         params:
           args:
             - python
-            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py
+            - /Users/YOURUSERNAME/Library/Preferences/espanso/script_replace-spaces.py
 
   # Bear Bi-directional date
   - trigger: ":bdate"

@@ -1,17 +1,18 @@
 # espanso configuration file
 # MAKE SURE TO HAVE THE PROPER PATH TO THE PYTHON SCRIPT.  Right click the python script and hold alt, you should see an option to copy the path
 
-# This is the default configuration file, change it as you like it
+
+
 # You can refer to the official documentation:
 # https://espanso.org/docs/
 
-# Matches are the substitution rules, when you type the "trigger" string
-# it gets replaced by the "replace" string.
 
 
-# Bear Bi-directional link v.2
-  - trigger: ":bfoot"
-    replace: "\n---\n\n{{output}}[{{mydate}}]" 
+matches:
+
+# Bear Bidirectional Footer (Unlinked References)
+  - trigger: ":bf"
+    replace: "{{output}}[{{mydate}}]" 
     vars:
       - name: clipboard
         type: clipboard
@@ -24,29 +25,13 @@
         params:
           args:
             - python
-            - /Users/YOURUSERNAME/Library/Preferences/espanso/script_replace-spaces.py
+            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py
 
 
-  # Bear Bi-directional link without date
-  - trigger: ":blink"
-    replace: "References to [{{clipboard}}](bear://x-callback-url/search?term=%22{{output}}%22)" 
-    vars:
-      - name: clipboard
-        type: clipboard
-      - name: mydate
-        type: date
-        params:
-          format: "%b %d, %Y at %I:%M %p"
-      - name: output
-        type: script
-        params:
-          args:
-            - python
-            - /Users/YOURUSERNAME/Library/Preferences/espanso/script_replace-spaces.py
-
-  # Bear Bi-directional date
-  - trigger: ":bdate"
-    replace: "---\n\n## Other References\nReferences to [{{mydate}}](bear://x-callback-url/search?term=%22{{bb}}%20{{dd}}%2C%20{{yy}}%22)\n\n#.daily"
+  # Bear Bidirectional Daily Note 
+  # Add this to a brand new, blank Bear note.  It will add the date to the title and footer with Unlinked (soft) references.
+  - trigger: ":bd"
+    replace: "{{mydate}}\n---\n### Unlinked References\nReferences to [{{mydate}}](bear://x-callback-url/search?term=%22{{bb}}%20{{dd}}%2C%20{{yy}}%22)\n\n#.daily notes#"
     vars:
       - name: mydate
         type: date
@@ -64,3 +49,21 @@
         type: date
         params:
           format: "%Y"
+
+
+  # Bear Bidirectional 
+  - trigger: ":bl"
+    replace: "References to [{{clipboard}}](bear://x-callback-url/search?term=%22{{output}}%22)" 
+    vars:
+      - name: clipboard
+        type: clipboard
+      - name: mydate
+        type: date
+        params:
+          format: "%b %d, %Y at %I:%M %p"
+      - name: output
+        type: script
+        params:
+          args:
+            - python
+            - /Users/callee/Library/Preferences/espanso/script_replace-spaces.py

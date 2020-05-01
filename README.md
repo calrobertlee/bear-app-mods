@@ -9,6 +9,6 @@ This shortcut uses Python to find and replace spaces in the string in the clipbo
 
 By typing the trigger text `:bf` in Bear it will auto-generate a footer with a soft reference link and date.
 
-By typing the trigger test `:bd` it a brand new Bear note, it will auto-generate a Daily Note with a footer
+By typing the trigger test `:bd` in a brand new Bear note, it will auto-generate a Daily Note with a footer
 
 Message me with any requests!

@@ -12,3 +12,5 @@ By typing the trigger text `:bf` in Bear it will auto-generate a footer with a s
 By typing the trigger test `:bd` in a brand new Bear note, it will auto-generate a Daily Note with a footer
 
 Message me with any requests!
+
+May 1st, 2020: I've made major changes to both the files, they should both be redownloaded

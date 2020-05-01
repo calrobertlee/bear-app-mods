@@ -11,5 +11,4 @@ preContent = read_from_clipboard()
 
 replacedContent = clipContent.replace(" ", "%20")
 
-print("## Other References\nReferences to ["+(preContent)+"](bear://x-callback-url/search?term=%22"+(replacedContent)+"%22)\n")
-
+print("---\n### Linked References\n\n### Unlinked References\nReferences to ["+(preContent)+"](bear://x-callback-url/search?term=%22"+(replacedContent)+"%22)\n")
